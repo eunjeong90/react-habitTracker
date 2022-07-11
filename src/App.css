@@ -1,7 +1,31 @@
+#root {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+}
+
 .habit {
   font-size: 2.5rem;
   padding: 0.5em;
   list-style: none;
+}
+
+.habit-navBox {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1em 0.2em;
+  background-color: bisque;
+}
+.habit-nav {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.habit-input {
+  font-size: 2rem;
+  max-width: 15rem;
+  margin-right: 0.2em;
 }
 
 .habit-count {
@@ -40,4 +64,10 @@ button {
 .habit-delete {
   font-size: 2rem;
   color: darkred;
+}
+.habits-green-btn {
+  font-size: 1.2rem;
+  background-color: green;
+  color: white;
+  padding: 0.5em 1.2em;
 }
