@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Navbar extends Component {
   render() {
+    console.log("navBar!");
     return (
       <div className="navbar">
         <i className="navbar-logo fas fa-leaf"></i>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Habit extends Component {
   handleIncrement = () => {
@@ -15,6 +15,7 @@ class Habit extends Component {
 
   render() {
     const { name, count } = this.props.habit;
+    console.log(`habit ${name}`);
     return (
       <li className="habit">
         <span className="habit-name">{name}</span>
