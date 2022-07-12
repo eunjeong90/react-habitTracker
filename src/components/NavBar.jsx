@@ -1,19 +1,15 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-class NavBar extends Component {
-  state = {
-    count: 0,
-  };
-  
+class Navbar extends Component {
   render() {
-    const { count } = this.props.habit;
     return (
-      <div className="habit-navBox">
-        <h1 className="habit-nav">🌈Habit Tracker</h1>
-        <span className="habit-count">{count}</span>
+      <div className="navbar">
+        <i className="navbar-logo fas fa-leaf"></i>
+        <span>Habit Tracker</span>
+        <span className="navbar-count">{this.props.totalCount}</span>
       </div>
     );
   }
 }
 
-export default NavBar;
+export default Navbar;
