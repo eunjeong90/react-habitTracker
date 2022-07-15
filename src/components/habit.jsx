@@ -1,5 +1,8 @@
 import React, { PureComponent } from "react";
 
+// class형 컴포넌트에서 멤버 변수는 처음에 한번만 실행되고 그 이후는
+// render 안에 있는 내용만 계속 재랜더링된다
+
 class Habit extends PureComponent {
   handleIncrement = () => {
     this.props.onIncrement(this.props.habit);

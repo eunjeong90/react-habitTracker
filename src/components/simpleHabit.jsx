@@ -1,16 +1,16 @@
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 
 const SimpleHabit = () => {
   const [count, setCount] = useState(0);
 
-  const handleIncrement = useCallback(() => {
-    setCount(count + 1);
-  });
+  const handleIncrement = () => {
+    setCount((prevCount) => prevCount + 1);
+  };
   const handleDecrement = () => {
-    setCount(count - 1);
-    if (count > 0) {
-      return 0;
+    if (count <= 0) {
+      return setCount(0);
     }
+    setCount((prevCount) => prevCount - 1);
   };
 
   return (
@@ -23,9 +23,6 @@ const SimpleHabit = () => {
       <button className="habit-button habit-decrease" onClick={handleDecrement}>
         <i className="fas fa-minus-square"></i>
       </button>
-      {/* <button className="habit-button habit-delete" onClick={this.handleDelete}>
-        <i className="fas fa-trash"></i>
-      </button> */}
     </li>
   );
 };
